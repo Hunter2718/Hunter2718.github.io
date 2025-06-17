@@ -1,0 +1,135 @@
+/* Cyberpunk style matching your rice (blue/black, minimal, neon-glow accents) */
+
+:root {
+  --bg: #0d1117;
+  --fg: #c9d1d9;
+  --accent: #00bfff;
+  --link: #1f6feb;
+  --highlight: #00ffff;
+  --shadow: rgba(0, 191, 255, 0.2);
+  --font-main: 'CaskaydiaCove Nerd Font', monospace;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  background-color: var(--bg);
+  color: var(--fg);
+  line-height: 1.6;
+  padding: 1rem;
+}
+
+header {
+  text-align: center;
+  padding: 4rem 0;
+  background: url("assets/logo-banner.png") center/cover no-repeat, #010409;
+  background-size: cover;
+  background-position top center;
+  box-shadow: 0 0 8px var(--shadow);
+  color: var(--fg);
+  position: relative;
+  z-index: 1;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 0;
+}
+
+header h1, nav {
+  position: relative;
+  z-index: 2;
+}
+
+h1, h2 {
+  color: var(--highlight);
+  text-shadow: 0 0 3px var(--accent);
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: var(--link);
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+nav a:hover {
+  color: var(--highlight);
+  text-shadow: 0 0 5px var(--accent);
+}
+
+main {
+  max-width: 900px;
+  margin: auto;
+  padding: 1rem;
+}
+
+section {
+  margin-bottom: 3rem;
+  padding: 1rem;
+  border-left: 3px solid var(--accent);
+  background-color: rgba(255, 255, 255, 0.02);
+  border-radius: 8px;
+  box-shadow: 0 0 10px var(--shadow);
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: var(--highlight);
+}
+
+footer a {
+    color: var(--accent);
+}
+
+footer a:hover {
+  color: var(--highlight);
+}
+
+@media (max-width: 600px) {
+  header {
+    background-position: center top;
+    background-size: contain;
+    padding: 3rem 1rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  main {
+    padding: 0.5rem;
+  }
+
+  section {
+    padding: 0.75rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+}
+
