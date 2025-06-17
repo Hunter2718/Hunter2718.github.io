@@ -20,16 +20,20 @@ body {
 }
 
 header {
-  text-align: center;
-  padding: 4rem 0;
-  background: url("assets/logo-banner.png") center/cover no-repeat, #010409;
-  background-size: cover;
-  background-position top center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: auto;
+  aspect-ratio: 16 / 5; /* Adjust this to match your actual banner aspect ratio */
+  background: url("assets/logo-banner.png") center center / contain no-repeat, #010409;
   box-shadow: 0 0 8px var(--shadow);
   color: var(--fg);
   position: relative;
   z-index: 1;
+  padding-bottom: 1.5rem; /* ensures nav has room */
 }
+
 
 header::before {
   content: "";
@@ -105,9 +109,10 @@ footer a:hover {
 
 @media (max-width: 600px) {
   header {
+    aspect-ratio: 16 / 6; /* slightly taller for small screens */
+    padding-bottom: 1rem;
     background-position: center top;
     background-size: contain;
-    padding: 3rem 1rem;
   }
 
   nav ul {
