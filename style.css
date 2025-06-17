@@ -26,7 +26,7 @@ header {
   align-items: center;
   height: auto;
   aspect-ratio: 16 / 5; /* Adjust this to match your actual banner aspect ratio */
-  background: url("assets/logo-banner.png") center center / contain no-repeat, #010409;
+  background: url("assets/logo-pfp.png") center center / contain no-repeat, #010409;
   box-shadow: 0 0 8px var(--shadow);
   color: var(--fg);
   position: relative;
